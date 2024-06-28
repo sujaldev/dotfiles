@@ -1,0 +1,12 @@
+[Unit]
+Description=KMonad Keyboard Config
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=%h/.local/bin/kmonad %h/.kmonadrc
+Nice=-20
+
+[Install]
+DefaultInstance=config
+WantedBy=default.target
