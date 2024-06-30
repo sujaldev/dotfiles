@@ -15,11 +15,34 @@
   lctl lmet lalt           spc                 ralt      rctl       left down  rght
 )
 
+;; Plasma Shortcuts
+(defalias
+  tem M-S-t ;; Terminal
+  fox M-f   ;; Firefox
+  crm M-c   ;; Google Chrome
+  stg M-i   ;; System Settings
+  exp M-e   ;; File Explorer
+  srs M-S-s ;; Screenshot
+)
+
+(defalias
+  qal (tap-next-press esc (layer-toggle quick-access)) ;; Quick Access Key
+)
+
 (deflayer base
   caps _    _    _    _    _    _    _    _    _    _    _    _
   grv  _    _    _    _    _    _    _    _    _    _    _    _    _     _     _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _     _     _
-  esc  _    _    _    _    _    _    _    _    _    _    _      _        _     _
+  @qal _    _    _    _    _    _    _    _    _    _    _      _        _     _
   _    _    _    _    _    _    _    _    _    _    _           _        _     _
+  _    _    _              _                   _         _          _    _     _
+)
+
+(deflayer quick-access
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _     _     _
+  _    _    _    @exp _    @tem _    _    @stg _    _    _    _    _     _     _
+  _    _    @srs _    @fox _    left down up   rght _    _      _        _     _
+  _    _    _    @crm _    _    _    _    _    _    _           _        _     _
   _    _    _              _                   _         _          _    _     _
 )
