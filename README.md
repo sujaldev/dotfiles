@@ -4,6 +4,9 @@ My dotfiles.
 
 # KMonad
 
+> [!NOTE]
+> The following is phrased as if the work is complete, but I haven't gotten around to finishing it yet.
+
 This section documents my thoughts regarding how I have set up my kmonad configuration. This config is currently meant
 for use with KDE plasma only. Some general thoughts:
 
